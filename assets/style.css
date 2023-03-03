@@ -1,0 +1,12 @@
+* {
+    --purple: purple;
+}
+
+
+.text-purple {
+    color: #C576F6;
+}
+
+.bg-purple {
+    background-color: #C576F6;
+}
