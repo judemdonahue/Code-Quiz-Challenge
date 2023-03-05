@@ -10,3 +10,14 @@
 .bg-purple {
     background-color: #C576F6;
 }
+
+
+.btn-default {
+    border: solid;
+    border-width: 0.12rem;
+}
+
+
+.btn-purple:hover {
+    background-color: #C576F6;
+}

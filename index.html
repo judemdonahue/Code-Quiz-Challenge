@@ -16,44 +16,59 @@
    <nav>   
       <div class="d-flex align-items-center container-fluid pt-3">
         <a class="navbar-brand text-purple" href="#">View Highscores</a>
-        <a href="#" class="ms-auto btn text-purple my-2">Time Remaining</a>
+        <div class= "ms-auto text-purple my-2 timer-text">
+            <div class = "timer-text text-center">
+            <div class="timer-count">75</div>
+            <h3>seconds remaining</h3>
+          </div>
       </div> 
     </nav>
+
+    <header class="d-flex justify-content-center">
+        <div class= "large-font">Code Quiz!</div>
+        <button class="start-button mx-3">Start</button>
+      </header>
 
     <main class="container-fluid my 3">
         <hr />
 
         <div class="vh-100 vw-100 bg-purple d-flex justify-content-center align-items-center">
 
-            <!-- Add classes to use sizing properties to make this row run the full width of the page and use flex properties to center justify content -->
+            <!-- Question Container Div -->
             <section class="row col-12 justify-content-center">
         
-              <div class="col-10 col-md-6 col-lg-5">
+                <!--Centers and sizes question container/ provides white bg-->
+              <div class="col-10 col-md-6 col-lg-5 bg-white rounded p-3 my-4">
         
-                <!-- Add classes to center this text and make it white -->
-                <h1 class="display-3 text-center text-light">Sign Up!</h1>
+                <!-- Code Quiz Title Element -->
+                <!--<h1 class="display-3 text-center text-light">Code Quiz!</h1>-->
         
-                <!-- Add classes to apply a white background, rounded corners, padding, and margin on the y-axis (top and bottom) -->
-                <form class="bg-white rounded p-3 my-4">
 
-                  <h3>Where did the swagmonster get his swagethy?</h3>
+                  <h2 id="question" class="display-5 text-center">Question Text</h2>
 
-                  <div class="py-2">
-                    <input class="form-control" placeholder="A. The Swag Store"/>
-                  </div>
+                  <ul style="list-style: none;">
+                    <li class="py-1">
+                        <button type="radio" name="answer" id="a" class="answer btn btn-block btn-purple btn-default w-100">
+                        <label for="a" id="a_text">Answer</label>
+                    </li>
 
-                  <div class="py-2">
-                    <input class="form-control" placeholder="B. Swags" />
-                  </div>
-        
-                  <div class="py-2">
-                    <input class="form-control" placeholder="C. Kool Kids Klub"/>
-                  </div>
+                    <li class="py-1">
+                        <button type="radio" name="answer" id="b" class="answer btn btn-block btn-purple btn-default w-100">
+                        <label for="b" id="b_text">Answer</label>
+                    </li>
 
-                  <div class="py-2">
-                    <input type="text" class="form-control" placeholder="D. He Has None"/>
-                  </div>
-                  
+                    <li class="py-1">
+                        <button type="radio" name="answer" id="c" class="answer btn btn-block btn-purple btn-default w-100">
+                        <label for="c" id="c_text">Answer</label>
+                    </li>
+
+                    <li class="py-1">
+                        <button type="radio" name="answer" id="d" class="answer btn btn-block btn-purple btn-default w-100">
+                        <label for="d" id="d_text">Answer</label>
+                    </li>
+
+                  </ul>
+
               </div>
             </section>
         
@@ -62,7 +77,7 @@
     </main>
 
 
-
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
