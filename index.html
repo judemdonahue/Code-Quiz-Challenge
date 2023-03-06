@@ -26,19 +26,20 @@
 
     <header class="d-flex justify-content-center">
         <div class= "large-font">Code Quiz!</div>
-        <button class="start-button mx-3">Start</button>
+        <!--<button class="start-button mx-3">Start</button>-->
       </header>
 
     <main class="container-fluid my 3">
         <hr />
 
-        <div class="vh-100 vw-100 bg-purple d-flex justify-content-center align-items-center">
+        <!--Everything below the nav and header(purple bg)-->
+        <section class="vh-100 bg-purple d-flex justify-content-center align-items-center">
 
             <!-- Question Container Div -->
-            <section class="row col-12 justify-content-center">
+            <div class="quiz-container row col-12 justify-content-center" id="quiz">
         
                 <!--Centers and sizes question container/ provides white bg-->
-              <div class="col-10 col-md-6 col-lg-5 bg-white rounded p-3 my-4">
+              <div class="quiz-header col-10 col-md-6 col-lg-5 bg-white rounded p-3 my-4">
         
                 <!-- Code Quiz Title Element -->
                 <!--<h1 class="display-3 text-center text-light">Code Quiz!</h1>-->
@@ -46,33 +47,32 @@
 
                   <h2 id="question" class="display-5 text-center">Question Text</h2>
 
-                  <ul style="list-style: none;">
+                  <ul style="list-style: none;" id="submit">
                     <li class="py-1">
-                        <button type="radio" name="answer" id="a" class="answer btn btn-block btn-purple btn-default w-100">
-                        <label for="a" id="a_text">Answer</label>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text" class="btn btn-purple btn-default w-75">Answer</label>
                     </li>
 
                     <li class="py-1">
-                        <button type="radio" name="answer" id="b" class="answer btn btn-block btn-purple btn-default w-100">
-                        <label for="b" id="b_text">Answer</label>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text" class="btn btn-purple btn-default w-75">Answer</label>
                     </li>
 
                     <li class="py-1">
-                        <button type="radio" name="answer" id="c" class="answer btn btn-block btn-purple btn-default w-100">
-                        <label for="c" id="c_text">Answer</label>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text" class="btn btn-purple btn-default w-75">Answer</label>
                     </li>
 
                     <li class="py-1">
-                        <button type="radio" name="answer" id="d" class="answer btn btn-block btn-purple btn-default w-100">
-                        <label for="d" id="d_text">Answer</label>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text" class="btn btn-purple btn-default w-75">Answer</label>
                     </li>
 
                   </ul>
-
               </div>
-            </section>
+            </div>
         
-          </div>
+        </section>
 
     </main>
 
