@@ -13,13 +13,40 @@
 
 
 .btn-default {
-    border: solid;
-    border-width: 0.12rem;
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 8%;
+    border-radius: 4px;
+    background: #A16AE8;
+    font-size: 2rem;
+    min-width: 15rem;
+ 
+    max-height: 8rem;
 }
 
 
 .btn-purple:hover {
-    background-color: #C576F6;
+    cursor: pointer;
+    box-shadow: 0 0.4 1.4rem 0 #000201;
+    transform: scale(1.02);
+    transform: transform 100ms;
 }
 
 
+.hide {
+    display: none !important; 
+}
+
+.display {
+    display: flex !important;
+}
+
+.correct {
+    color: limegreen;
+    background: liner-gradient(limegreen)
+}
+
+.incorrect {
+    color: red;
+    background: liner-gradient(red)
+}
