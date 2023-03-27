@@ -94,7 +94,7 @@ const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
-const submitBtn = document.getElementById('submit');
+const answerList = document.getElementById('answerList');
 const highScore = document.getElementById('highscore');
 
 const timerCount = document.querySelector(".timer-count")
@@ -141,7 +141,7 @@ function getSelected() {
 }
 
 
-submitBtn.addEventListener('click', () => {
+answerList.addEventListener('click', () => {
     const answer = getSelected()
 
     if(answer) {
@@ -206,19 +206,22 @@ function setTime() {
             
             quiz.innerHTML = 
             
-            `<h2 class="text-center">You answered ${score}/${quizData.length} questions correctly</h2>
+            `<h2 class="text-center">You answered ${score}/${quizData.length} question correctly!</h2>
 
             <hr />
  
-            <h4 class="text-center">Enter your initials</h4>
+            <h4 class="text-center">Enter your name or initials below</h4>
             
             <input type="text" id="initial" class="col-1 d-flex justify-content-center my-2">
  
             <div class="row col-12 d-flex justify-content-center"><button id="submit" class="btn btn-purple btn-default display col-2 display-5 d-flex justify-content-center p-2 my-4" onclick="">Submit Score</button></div>
  
+            <div class="row col-12 d-flex justify-content-center"><button class="btn btn-purple btn-default display col-2 display-5 d-flex justify-content-center p-2 my-3" onclick="location.reload()">Reload</button></div>
+            
+
             <hr />
- 
-            <div class="row col-12 d-flex justify-content-center"><button class="btn btn-purple btn-default display col-2 display-5 d-flex justify-content-center p-2 my-3" onclick="location.reload()">Reload</button></div>`
+            `
+            
 
             resultContainer.innerHTML = ``
 
@@ -245,7 +248,7 @@ function submitEventListener () {
    var submitInner = document.getElementById("submit");
    submitInner.addEventListener('click', function(){
     var userInput = document.getElementById("initial");
-    highscoresArray.push({initials:userInput.value,score:score});
+    highscoresArray.push({names:userInput.value,score:score});
     localStorage.setItem("highscoreTable", JSON.stringify(highscoresArray));
     showHighscores();
    })
@@ -258,7 +261,7 @@ function showHighscores () {
     quiz.innerHTML = 
     `<h2 class="text-center">Highscores</h2>
 
-    <ol id="hsList" class="text-center"></ol>
+    <dt id="hsList" class="text-center"></dt>
 
     <div class="row col-12 d-flex justify-content-center"><button id="clearBtn" class="btn btn-purple btn-default display col-2 display-5 d-flex justify-content-center p-2 my-3">Clear Scores</button></div>
 
@@ -268,7 +271,7 @@ function showHighscores () {
 
     for (i = 0; i < highscoresArray.length; i++) {
         var newListItem = document.createElement("li");
-        newListItem.textContent = highscoresArray[i].initials + " | " + highscoresArray[i].score;
+        newListItem.textContent = highscoresArray[i].names + " | " + highscoresArray[i].score + "/" + quizData.length;
         hsListEl.append(newListItem);
     }
 
@@ -302,5 +305,5 @@ highScore.addEventListener('click', showHighscores)
 // when all questions are answered or the timer reaches 0
 // the game is over
 
-// when the game is over you save your initials and score
+// when the game is over you save your name and score
 // when you click view high scores you are presented with the previous games high scores
